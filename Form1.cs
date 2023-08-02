@@ -8,11 +8,12 @@ namespace C__Windows_Forms_Application
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            TypeTextBox.KeyDown += TypeTextBox_KeyDown;
         }
 
         private void HostButton_Click(object sender, EventArgs e)
@@ -23,13 +24,13 @@ namespace C__Windows_Forms_Application
                 {
                     int port = int.Parse(MyPortTextBox.Text);
                     server = ChatServer.CreateInstance(port, ChatTextBox);
-                    if (server == null ) 
+                    if (server == null)
                     {
                         throw new Exception("Incorrect Port Value!"); // Exits try block
                     }
                     server.SetupServer();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     ChatTextBox.Text += "Error: " + ex.Message + "\n";
                 }
@@ -52,7 +53,7 @@ namespace C__Windows_Forms_Application
                     }
                     client.ConnectToServer();
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
                     ChatTextBox.Text += "Error: " + ex.Message + "\n";
                 }
@@ -61,11 +62,11 @@ namespace C__Windows_Forms_Application
 
         private void SendButton_Click(object sender, EventArgs e)
         {
-            if (client != null) 
+            if (client != null)
             {
                 client.SendString(TypeTextBox.Text);
             }
-            else if (server!=null) 
+            else if (server != null)
             {
                 server.SendToAll(TypeTextBox.Text, null);
             }
@@ -76,6 +77,44 @@ namespace C__Windows_Forms_Application
             if (server == null && client == null)
                 return true;
             else return false; // Has already become a client or a server.
+        }
+
+        private void SendButton_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    if (client != null)
+            //    {
+            //        client.SendString(TypeTextBox.Text);
+            //    }
+            //    else if (server != null)
+            //    {
+            //        server.SendToAll(TypeTextBox.Text, null);
+            //    }
+            //}
+        }
+
+        private void TypeTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (SendButton.Focused) // Check if SendButton is already focused
+                    return;
+
+                SendButton.Focus();
+                e.Handled = true; // Prevent the Enter key from adding a new line in the TextBox
+
+                if (client != null)
+                {
+                    client.SendString(TypeTextBox.Text);
+                }
+                else if (server != null)
+                {
+                    server.SendToAll(TypeTextBox.Text, null);
+                }
+
+                TypeTextBox.Focus();
+            }
         }
     }
 }

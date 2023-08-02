@@ -15,4 +15,3 @@ C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Deb
 C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.pdb
 C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.genruntimeconfig.cache
 C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\ref\C# Windows Forms Application.dll
-C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C__Windows_Forms_Application.FormChat.resources

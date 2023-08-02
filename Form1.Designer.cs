@@ -115,9 +115,11 @@
             // 
             // ChatTextBox
             // 
+            ChatTextBox.BackColor = SystemColors.ControlLightLight;
             ChatTextBox.Location = new Point(12, 85);
             ChatTextBox.Multiline = true;
             ChatTextBox.Name = "ChatTextBox";
+            ChatTextBox.ReadOnly = true;
             ChatTextBox.ScrollBars = ScrollBars.Vertical;
             ChatTextBox.Size = new Size(452, 250);
             ChatTextBox.TabIndex = 9;
@@ -137,6 +139,7 @@
             TypeTextBox.Name = "TypeTextBox";
             TypeTextBox.Size = new Size(338, 23);
             TypeTextBox.TabIndex = 11;
+            TypeTextBox.KeyDown += TypeTextBox_KeyDown;
             // 
             // SendButton
             // 
@@ -147,6 +150,7 @@
             SendButton.Text = "Send";
             SendButton.UseVisualStyleBackColor = true;
             SendButton.Click += SendButton_Click;
+            SendButton.KeyDown += SendButton_KeyDown;
             // 
             // Form1
             // 
