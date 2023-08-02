@@ -1,0 +1,18 @@
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\bin\Debug\net6.0-windows\C# Windows Forms Application.exe
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\bin\Debug\net6.0-windows\C# Windows Forms Application.deps.json
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\bin\Debug\net6.0-windows\C# Windows Forms Application.runtimeconfig.json
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\bin\Debug\net6.0-windows\C# Windows Forms Application.dll
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\bin\Debug\net6.0-windows\C# Windows Forms Application.pdb
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.csproj.AssemblyReference.cache
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C__Windows_Forms_Application.Form1.resources
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.csproj.GenerateResource.cache
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.AssemblyInfoInputs.cache
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.AssemblyInfo.cs
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.csproj.CoreCompileInputs.cache
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.dll
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\refint\C# Windows Forms Application.dll
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.pdb
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C# Windows Forms Application.genruntimeconfig.cache
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\ref\C# Windows Forms Application.dll
+C:\Users\joeka\Documents\Portfolio Projects\C# Windows Forms Application\obj\Debug\net6.0-windows\C__Windows_Forms_Application.FormChat.resources
