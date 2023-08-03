@@ -28,28 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             MyPortTextBox = new TextBox();
             HostButton = new Button();
-            label2 = new Label();
+            labelServerPort = new Label();
             ServerPortTextBox = new TextBox();
-            label4 = new Label();
+            labelServerID = new Label();
             ServerIPTextBox = new TextBox();
             JoinServerButton = new Button();
             ChatTextBox = new TextBox();
             label3 = new Label();
             TypeTextBox = new TextBox();
             SendButton = new Button();
+            labelMyPort = new RichTextBox();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 15);
-            label1.TabIndex = 0;
-            label1.Text = "My Port";
             // 
             // MyPortTextBox
             // 
@@ -69,14 +60,14 @@
             HostButton.UseVisualStyleBackColor = true;
             HostButton.Click += HostButton_Click;
             // 
-            // label2
+            // labelServerPort
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(139, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(64, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Server Port";
+            labelServerPort.AutoSize = true;
+            labelServerPort.Location = new Point(139, 9);
+            labelServerPort.Name = "labelServerPort";
+            labelServerPort.Size = new Size(64, 15);
+            labelServerPort.TabIndex = 3;
+            labelServerPort.Text = "Server Port";
             // 
             // ServerPortTextBox
             // 
@@ -86,14 +77,14 @@
             ServerPortTextBox.TabIndex = 4;
             ServerPortTextBox.Text = "9994";
             // 
-            // label4
+            // labelServerID
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(266, 9);
-            label4.Name = "label4";
-            label4.Size = new Size(52, 15);
-            label4.TabIndex = 6;
-            label4.Text = "Server IP";
+            labelServerID.AutoSize = true;
+            labelServerID.Location = new Point(266, 9);
+            labelServerID.Name = "labelServerID";
+            labelServerID.Size = new Size(52, 15);
+            labelServerID.TabIndex = 6;
+            labelServerID.Text = "Server IP";
             // 
             // ServerIPTextBox
             // 
@@ -152,23 +143,36 @@
             SendButton.Click += SendButton_Click;
             SendButton.KeyDown += SendButton_KeyDown;
             // 
+            // labelMyPort
+            // 
+            labelMyPort.BackColor = SystemColors.ButtonFace;
+            labelMyPort.BorderStyle = BorderStyle.None;
+            labelMyPort.Location = new Point(12, 9);
+            labelMyPort.Multiline = false;
+            labelMyPort.Name = "labelMyPort";
+            labelMyPort.ReadOnly = true;
+            labelMyPort.ScrollBars = RichTextBoxScrollBars.None;
+            labelMyPort.Size = new Size(66, 18);
+            labelMyPort.TabIndex = 13;
+            labelMyPort.Text = "My Port";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(475, 384);
+            Controls.Add(labelMyPort);
             Controls.Add(SendButton);
             Controls.Add(TypeTextBox);
             Controls.Add(label3);
             Controls.Add(ChatTextBox);
             Controls.Add(JoinServerButton);
             Controls.Add(ServerIPTextBox);
-            Controls.Add(label4);
+            Controls.Add(labelServerID);
             Controls.Add(ServerPortTextBox);
-            Controls.Add(label2);
+            Controls.Add(labelServerPort);
             Controls.Add(HostButton);
             Controls.Add(MyPortTextBox);
-            Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -177,18 +181,17 @@
         }
 
         #endregion
-
-        private Label label1;
         private TextBox MyPortTextBox;
         private Button HostButton;
-        private Label label2;
+        private Label labelServerPort;
         private TextBox ServerPortTextBox;
-        private Label label4;
+        private Label labelServerID;
         private TextBox ServerIPTextBox;
         private Button JoinServerButton;
         private TextBox ChatTextBox;
         private Label label3;
         private TextBox TypeTextBox;
         private Button SendButton;
+        private RichTextBox labelMyPort;
     }
 }

@@ -13,7 +13,6 @@ namespace C__Windows_Forms_Application
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            TypeTextBox.KeyDown += TypeTextBox_KeyDown;
         }
 
         private void HostButton_Click(object sender, EventArgs e)
@@ -46,7 +45,8 @@ namespace C__Windows_Forms_Application
                     int port = int.Parse(MyPortTextBox.Text);
                     int serverPort = int.Parse(ServerPortTextBox.Text);
                     client = ChatClient.CreateInstance(port, serverPort, ServerIPTextBox.Text,
-                        ChatTextBox);
+                        ChatTextBox, Form1.ActiveForm, ServerPortTextBox, ServerIPTextBox, HostButton, JoinServerButton,
+                        labelMyPort, labelServerID, labelServerPort, MyPortTextBox);
                     if (client == null)
                     {
                         throw new Exception("Incorrect Port Value!");
@@ -70,6 +70,7 @@ namespace C__Windows_Forms_Application
             {
                 server.SendToAll(TypeTextBox.Text, null);
             }
+            TypeTextBox.Clear();
         }
 
         public bool CanHostOrJoin()
@@ -94,6 +95,18 @@ namespace C__Windows_Forms_Application
             //}
         }
 
+        public void HideServerInformation()
+        {
+            MyPortTextBox.Hide();
+            labelMyPort.Hide();
+            labelServerPort.Hide();
+            labelServerID.Hide();
+            ServerPortTextBox.Hide();
+            ServerIPTextBox.Hide();
+            HostButton.Hide();
+            JoinServerButton.Hide();
+        }
+
         private void TypeTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -104,14 +117,7 @@ namespace C__Windows_Forms_Application
                 SendButton.Focus();
                 e.Handled = true; // Prevent the Enter key from adding a new line in the TextBox
 
-                if (client != null)
-                {
-                    client.SendString(TypeTextBox.Text);
-                }
-                else if (server != null)
-                {
-                    server.SendToAll(TypeTextBox.Text, null);
-                }
+                SendButton_Click(sender, e);
 
                 TypeTextBox.Focus();
             }
