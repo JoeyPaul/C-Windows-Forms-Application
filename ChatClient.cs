@@ -58,7 +58,7 @@ namespace C__Windows_Forms_Application
                 chatClient.serverPortLabel = serverPortLabel;
                 chatClient.serverIPLabel = IPLabel;
 
-                // Add controls to the serverInfoControls list
+                // Add controls to the serverInfoControls list so we deactivate UI elements easily
                 chatClient.serverInfoControls.Add(chatClient.serverPortTextBox);
                 chatClient.serverInfoControls.Add(chatClient.serverIPTextBox);
                 chatClient.serverInfoControls.Add(chatClient.hostButton);
